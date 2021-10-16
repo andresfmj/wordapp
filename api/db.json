@@ -1,0 +1,39 @@
+{
+	"numeros": [
+		{
+			"id": 1,
+			"numero": "number",
+			"acumulado": "number"
+		},
+		{
+			"id": 2,
+			"numero": "number",
+			"acumulado": "number"
+		},
+		{
+			"numero": 123,
+			"acumulado": 17,
+			"id": 3
+		},
+		{
+			"numero": 654,
+			"acumulado": 22,
+			"id": 4
+		}
+	],
+	"texto": [
+		{
+			"id": 1,
+			"texto": "string",
+			"inicial": "char",
+			"final": "char"
+		}
+	],
+	"caracteres": [
+		{
+			"id": 1,
+			"caracter": "char"
+		}
+	],
+	"temp": []
+}
