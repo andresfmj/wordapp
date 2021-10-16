@@ -1,0 +1,39 @@
+{
+	"name": "wordapp",
+	"version": "1.0.0",
+	"description": "separacion de palabras",
+	"main": "src/main.js",
+	"scripts": {
+		"build": "webpack --mode production",
+		"dev:serve": "webpack serve --mode development",
+		"server": "node api/server.js"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/andresfmj/wordapp.git"
+	},
+	"keywords": [],
+	"author": "Andres Fernando <andres.fernando08@gmail.com>",
+	"license": "MIT",
+	"bugs": {
+		"url": "https://github.com/andresfmj/wordapp/issues"
+	},
+	"homepage": "https://github.com/andresfmj/wordapp#readme",
+	"devDependencies": {
+		"@babel/core": "^7.15.8",
+		"@babel/plugin-transform-runtime": "^7.15.8",
+		"@babel/preset-env": "^7.15.8",
+		"@babel/runtime": "^7.15.4",
+		"babel-loader": "^8.2.2",
+		"cors": "^2.8.5",
+		"html-webpack-plugin": "^5.4.0",
+		"morgan": "^1.10.0",
+		"webpack": "^5.58.2",
+		"webpack-cli": "^4.9.0",
+		"webpack-dev-server": "^4.3.1"
+	},
+	"dependencies": {
+		"express": "^4.17.1",
+		"json-server": "^0.17.0"
+	}
+}
