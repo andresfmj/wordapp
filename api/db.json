@@ -1,39 +1,18 @@
 {
 	"numeros": [
 		{
-			"id": 1,
-			"numero": "number",
-			"acumulado": "number"
-		},
-		{
-			"id": 2,
-			"numero": "number",
-			"acumulado": "number"
-		},
-		{
-			"numero": 123,
-			"acumulado": 17,
-			"id": 3
-		},
-		{
-			"numero": 654,
-			"acumulado": 22,
-			"id": 4
+			"numero": "4",
+			"acumulado": 6,
+			"id": 1
 		}
 	],
 	"texto": [
 		{
-			"id": 1,
-			"texto": "string",
-			"inicial": "char",
-			"final": "char"
+			"texto": "Hola",
+			"inicial": "H",
+			"final": "a",
+			"id": 1
 		}
 	],
-	"caracteres": [
-		{
-			"id": 1,
-			"caracter": "char"
-		}
-	],
-	"temp": []
+	"caracteres": []
 }
