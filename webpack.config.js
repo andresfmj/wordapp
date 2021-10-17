@@ -30,6 +30,7 @@ const config = {
 		historyApiFallback: true,
 		compress: true,
 		port: 9000,
+		disableHostCheck: true,
 	},
 };
 
