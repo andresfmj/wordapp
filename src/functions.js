@@ -21,12 +21,12 @@ export const formSubmitHandler = (event) => {
 
 		// es numero? se debe buscar el numero en el json, y luego con el id obtenido actualizar el acumulado
 		// si no existe el numero, se ingresa como nuevo
-		if (!isNaN(value)) {
+		if (value.match(/^\d+$/)) {
 			saveNumber(value);
 		}
 
 		// es solo texto? guardar el texto, el caracter inicial y el final
-		if (isNaN(value)) {
+		if (value.match(/^[a-zA-Z]+$/)) {
 			saveText(value);
 		}
 
