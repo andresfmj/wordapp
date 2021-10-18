@@ -1,4 +1,4 @@
-const API = 'http://localhost:3010';
+const API = 'http://wd.ferudinato.com:3010';
 const special_chars = '!@#$%^&*()=+-_ñ`´<>?/|"{}[];:,.';
 
 let input = {
