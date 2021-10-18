@@ -1,4 +1,4 @@
-const API = 'http://wd.ferudinato.com:3010';
+const API = 'http://localhost:3010';
 const special_chars = '!@#$%^&*()=+-_ñ`´<>?/|"{}[];:,.';
 
 let input = {
@@ -71,6 +71,7 @@ const saveSpecialCharacter = (value_arr) => {
 		});
 		alert(`Caracteres especiales guardados: ${value_arr.join(', ')}`);
 		resetInput();
+		fetchSpecialCharacters();
 	} catch (error) {
 		console.log(error);
 	}
@@ -100,6 +101,7 @@ const saveText = async (value) => {
 			);
 			resetInput();
 		}
+		fetchTexts();
 	} catch (error) {
 		console.log(error);
 	}
@@ -143,6 +145,7 @@ const saveNumber = async (value) => {
 			alert(`Numero guardado: ${value}`);
 			resetInput();
 		}
+		fetchNumbers();
 	} catch (error) {
 		console.log(error);
 	}
@@ -155,4 +158,55 @@ const resetInput = () => {
 	};
 	const inputHTML = document.getElementById('input-text');
 	inputHTML.value = '';
+};
+
+const fetchNumbers = async (numberAddedOrUpdated) => {
+	try {
+		let numbers = await fetch(`${API}/api/numeros`);
+		numbers = await numbers.json();
+
+		const numbersList = document.getElementById('output-list');
+		numbersList.innerHTML = '';
+		numbers.forEach((i) => {
+			const li = document.createElement('li');
+			li.innerHTML = `Numero: ${i.numero} | Acumulado: ${i.acumulado}`;
+			numbersList.appendChild(li);
+		});
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+const fetchTexts = async () => {
+	try {
+		let texts = await fetch(`${API}/api/texto`);
+		texts = await texts.json();
+
+		const textsList = document.getElementById('output-list');
+		textsList.innerHTML = '';
+		texts.forEach((i) => {
+			const li = document.createElement('li');
+			li.innerHTML = `Texto: ${i.texto} | Primera letra: ${i.inicial} | Ultima letra: ${i.final}`;
+			textsList.appendChild(li);
+		});
+	} catch (error) {
+		console.log(error);
+	}
+};
+
+const fetchSpecialCharacters = async () => {
+	try {
+		let specialCharacters = await fetch(`${API}/api/caracteres`);
+		specialCharacters = await specialCharacters.json();
+
+		const sp_chars = document.getElementById('output-list');
+		sp_chars.innerHTML = '';
+		specialCharacters.forEach((i) => {
+			const li = document.createElement('li');
+			li.innerHTML = `Caracter: ${i.caracter}`;
+			sp_chars.appendChild(li);
+		});
+	} catch (error) {
+		console.log(error);
+	}
 };
